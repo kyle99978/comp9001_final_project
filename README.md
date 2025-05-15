@@ -1,3 +1,39 @@
+DUAN_Translating – Your All-in-One AI Language Assistant
+
+Powered by cutting-edge AI models (ChatGPT & DeepSeek), state-of-the-art audio processing (Whisper), and world-class translation APIs (DeepL & Google), DUAN_Translating is a comprehensive tool that combines text translation, audio transcription/translation, and document editing into a single intelligent platform.
+
+Whether you're working on cross-language writing, generating subtitles for audio/video, transcribing meetings, or simply translating everyday content, DUAN_Translating delivers fast, accurate, and natural language services.
+
+🔹 Supports multilingual transcription & translation
+🔹 Built-in speech recognition engine with input from PC software, microphone, audio, and video files (currently optimized for audio)
+🔹 Seamless switching between intelligent models, fully compatible with GPT and DeepSeek families
+🔹 Light and dark themes for a comfortable experience, day or night
+🔹 Offline editing and multi-format export to easily save and organize your translated content
+
+Designed for creators, researchers, content producers, and multilingual users alike, DUAN_Translating is your all-in-one language toolkit.
+
+Break the boundaries of language—start using DUAN_Translating today.
+
+###############################################################################################################
+###############################################################################################################
+
+翻译为英文融合最先进的 AI 模型（ChatGPT & DeepSeek）、卓越的音频处理模型（Whisper）和顶尖的API（Deepl & Google），DUAN Translating 是一款集文本翻译、音频转录/翻译、编辑整理于一体的智能语言助手。
+无论你是进行跨语言写作、音/视频字幕生成、会议转写还是日常翻译交流，它都能提供快速、精准、自然的语言服务。
+🔹 支持多语种转录& 翻译
+🔹 内置语音识别引擎，支持PC程序/麦克风/音频/视频文件输入（当前仅完善音频支持）
+🔹 智能模型自由切换，兼容 GPT 与 DeepSeek 家族
+🔹 深色 / 浅色主题可选，适配全天候使用体验
+🔹 离线编辑、多格式导出，轻松保存翻译结果
+为创作者、研究者、内容制作者和多语用户打造的一站式语言工具
+立即使用 DUAN\_Translating，让语言不再成为你的边界。
+
+
+
+
+
+
+
+
 
 ###############################################################################################################
 ###############################################################################################################

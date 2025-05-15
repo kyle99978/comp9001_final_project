@@ -1,0 +1,32 @@
+###############################################################
+#############   EN    #########################################
+###############################################################
+https://www.deepl.com/zh/pro-api
+https://www.deepl.com/zh/your-account/subscription
+https://segmentfault.com/a/1190000045447362
+
+
+In order to execute successfully, you need to get the API for deepl first.
+Then populate the key into the arguments of the py file(deep_api_in.py).
+'''
+    params = {
+        'auth_key': 'your key',  # Replace it with your DeepL API key
+        'text': text,
+        'target_lang': target_lang
+    }
+'''
+
+
+
+
+###############################################################
+#################  中文 ########################################
+###############################################################
+
+为了执行成功，你需要先获取deepl的API，
+然后将key填充到py文件(deep_api_in.py)的参数中。
+    params = {
+        'auth_key': '36b68825-d57b-4211-a7c3-f380428634ef:fx',  # 替换为你的DeepL API密钥
+        'text': text,
+        'target_lang': target_lang
+    }

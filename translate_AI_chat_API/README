@@ -1,0 +1,20 @@
+
+
+First execute the file check_available_models.py to check for available models
+
+You can run the ctk_AI_chat_beta.py file to check/test with gui
+
+or test in terminal by running：
+onetime_chat_win.py： only answer a time  in terminal
+muti_chat.py ： muti chat in terminal
+
+
+note: you should add your key in the file you want to test
+api_key = 'your key'  # Replace it with your API key
+
+
+
+
+
+
+

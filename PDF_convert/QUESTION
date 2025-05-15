@@ -1,0 +1,27 @@
+
+
+####################################################3
+####################################################3
+####################################################3
+
+    此文档记录了一些开发过程中相对棘手的bug调试问题
+    This document documents some of the relatively tricky bug debugging issues during development
+
+####################################################3
+####################################################3
+####################################################3
+
+
+
+
+CropBox missing from /Page, defaulting to MediaBox
+只是一个 警告（warning），并且它不会影响你提取文本、表格或图片，可以安全忽略
+
+说明
+什么是 CropBox？	PDF标准中，每一页可以有不同的显示区域设置，CropBox就是定义：用户实际能看到哪一部分页面
+什么是 MediaBox？	MediaBox是PDF页面的完整物理尺寸，比如A4纸大小
+这个警告什么意思？	你的PDF文件中，这些页面没有单独指定 CropBox，所以 pdfplumber 自动 fallback，用 MediaBox 来代替
+
+可以用 warnings 模块禁止显示这个 warning
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)

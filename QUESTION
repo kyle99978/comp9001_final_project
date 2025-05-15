@@ -1,0 +1,121 @@
+
+####################################################3
+####################################################3
+####################################################3
+
+    此文档记录了一些开发过程中相对棘手的bug调试问题
+    This document documents some of the relatively tricky bug debugging issues during development
+
+####################################################3
+####################################################3
+####################################################3
+
+
+
+
+
+
+
+
+1.  删除textbox里面的内容，如果不主动加刷新 update() 的话，会延迟一会，text里面的文字才会销毁
+def get_text_from_user(root,input_text):
+    usr_input = input_text.get("1.0", "end").strip()
+    input_text.delete("1.0", "end")
+    root.update()  # 不加刷新的话，显示会延迟
+
+
+ 2. 销毁主窗口的时候，一定要同时销毁其他的窗口，特别是一些子文件的里面创建
+
+
+ 3. tk 默认当所有的窗口withdraw或者，quit()时候，会自动退出主线程
+
+
+4. 多线程，触及同变量需要加锁
+    同一个变量必须使用同一个锁
+    with lock：一直等待
+
+
+ 5. 如果窗口图标文件用的是相对路径，update() 或线程中更新窗口后可能导致当前工作目录改变，使图标加载失败。
+使用了 ctk.CTkToplevel()、withdraw() 后再 deiconify() 或 update() 可能导致窗口被“重构”，图标会丢失。
+    root.update()
+    root.iconbitmap(icon_path)  # 再次设置图标
+
+    ####################################################3
+
+
+
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\D--Ky\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1948, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "D:\Z_Projects\python_projects\Python3.12\pro1(only-test)\.venv\pro6_translate\Lib\site-packages\customtkinter\windows\widgets\ctk_scrollable_frame.py", line 248, in _mouse_wheel_all
+    if self.check_if_master_is_canvas(event.widget):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Z_Projects\python_projects\Python3.12\pro1(only-test)\.venv\pro6_translate\Lib\site-packages\customtkinter\windows\widgets\ctk_scrollable_frame.py", line 280, in check_if_master_is_canvas
+    elif widget.master is not None:
+         ^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'master'
+
+
+
+
+
+
+
+
+1. python threading 多线程：
+开始：
+        import threading
+
+        def task():
+            print("子线程运行中...")
+
+        t = threading.Thread(target=task)
+        t.start()  # 启动线程（异步，不阻塞主线程）
+
+等待结束：join(timeout=...)：支持设置最大等待时间
+
+        t.join()  # 阻塞当前线程，直到 t 执行完毕
+        print("线程已完成")
+        可选参数 timeout=秒数，指定最大等待时间。
+
+        通常用于程序退出前确保线程执行完毕。
+
+主动关闭：Python 不支持直接 kill 线程，推荐使用「标志变量」退出：
+               def run(self):
+                    while self.running:
+                        print("线程工作中...")
+                        time.sleep(1)
+                    print("线程已退出")
+
+
+
+
+
+守护进程：主线程退出时它也会自动终止。
+        t = threading.Thread(target=task, daemon=True)
+        daemon=True：线程为 守护线程，主线程退出时它也会自动终止。
+        常用于后台监控、定时更新等任务。
+        ⚠️ 不能用于重要数据处理（程序退出就会强制杀掉）。
+
+
+
+
+共享变量：
+可变类型（如 list、dict、自定义类）天然支持共享。
+不可变类型（如 int、str）需用 global 声明或包进对象中共享。
+
+
+
+怎么放置冲突：
+多个线程同时修改同一个变量会出现竞态条件（Race Condition），必须加锁
+lock = threading.Lock()
+
+def safe_task():
+    with lock:
+        # 临界区代码（只允许一个线程同时执行）
+        shared_data["count"] += 1
+用 with lock: 可自动加锁释放锁
+
+多个共享资源建议使用多个锁或封装管理类

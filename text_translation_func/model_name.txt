@@ -1,0 +1,40 @@
+
+
+'''https://huggingface.co/models?sort=downloads&search=opus-mt'''
+
+Helsinki-NLP provides models for hundreds of language pairs:
+
+Language Direction Model Name Translation Direction
+Chinese ➜ English Helsinki-NLP/opus-mt-zh-en         # Chinese → English
+English ➜ Chinese Helsinki-NLP/opus-mt-en-zh         # English → Chinese
+Japanese ➜ English Helsinki-NLP/opus-mt-ja-en        # Japanese → English
+English ➜ Japanese Helsinki-NLP/opus-mt-en-jap       # English → Japanese
+Korean ➜ English Helsinki-NLP/opus-mt-ko-en          # Korean → English
+English ➜ Korean Helsinki-NLP/opus-mt-en-ko          # English → Korean
+French ➜ English Helsinki-NLP/opus-mt-fr-en          # French → English
+English ➜ French Helsinki-NLP/opus-mt-en-fr          # English → French
+
+
+
+
+
+
+
+
+########################################################################
+########################################################################
+########################################################################
+########################################################################
+
+Helsinki-NLP provides models for hundreds of language pairs:
+
+语种方向	模型名	翻译方向
+中 ➜ 英	Helsinki-NLP/opus-mt-zh-en	       #  中文 → 英文
+英 ➜ 中	Helsinki-NLP/opus-mt-en-zh	       #  英文 → 中文
+日 ➜ 英	Helsinki-NLP/opus-mt-ja-en	       #  日文 → 英文
+英 ➜ 日	Helsinki-NLP/opus-mt-en-jap	       #  英文 → 日文
+韩 ➜ 英	Helsinki-NLP/opus-mt-ko-en	       #  韩文 → 英文
+英 ➜ 韩	Helsinki-NLP/opus-mt-en-ko	       #  英文 → 韩文
+法 ➜ 英	Helsinki-NLP/opus-mt-fr-en	       #  法文 → 英文
+英 ➜ 法	Helsinki-NLP/opus-mt-en-fr	       #  英文 → 法文
+

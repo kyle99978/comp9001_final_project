@@ -1,3 +1,18 @@
+The program is designed based on win11+python3.12
+
+You can use the functions by running main.py
+
+Currently available functions:
+Text translation window, 
+MP3 audio file transcription, 
+AI chat window
+
+# You can play the demo video to check how to use
+## In addition, because the code uses an API, you should complete your own API KEY in the code to ensure that it works.
+## Please read the README files in all subdirectories if you want to master it fully.
+###################################################################################################
+###################################################################################################
+###################################################################################################
 DUAN_Translating – Your All-in-One AI Language Assistant
 
 Powered by cutting-edge AI models (ChatGPT & DeepSeek), state-of-the-art audio processing (Whisper), and world-class translation APIs (DeepL & Google), DUAN_Translating is a comprehensive tool that combines text translation, audio transcription/translation, and document editing into a single intelligent platform.
@@ -19,6 +34,22 @@ Designed for creators, researchers, content producers, and multilingual users al
 
 Break the boundaries of language—start using DUAN_Translating today.
 
+
+
+###################################################################################################
+###################################################################################################
+###################################################################################################
+程序基于win11+python3.12设计
+你可以通过运行main.py来使用功能
+当前可用功能：
+主题切换
+文本翻译单独窗口
+音频文件转录
+AI chat 单独窗口
+
+# 您可以播放演示视频，了解如何使用
+## 另外 因为代码使用了API, 为了确保功能正常使用，你应该在代码补全你自己的API KEY
+## 具体请阅读所有子目录下的README文件
 
 ###################################################################################################
 ###################################################################################################
@@ -44,33 +75,4 @@ Break the boundaries of language—start using DUAN_Translating today.
 
 
 
-###################################################################################################
-###################################################################################################
-###################################################################################################
-The program is designed based on win11+python3.12
-You can use the functions by running main.py
 
-Currently available functions:
-Text translation window .
-MP3 audio file transcription
-AI chat window
-
-# You can play the demo video to check how to use
-## In addition, because the code uses an API, you should complete your own API KEY in the code to ensure that it works.
-## Please read the README files in all subdirectories.
-###################################################################################################
-###################################################################################################
-###################################################################################################
-
-
-程序基于win11+python3.12设计
-你可以通过运行main.py来使用功能
-当前可用功能：
-主题切换
-文本翻译单独窗口
-音频文件转录
-AI chat 单独窗口
-
-# 您可以播放演示视频，了解如何使用
-## 另外 因为代码使用了API, 为了确保功能正常使用，你应该在代码补全你自己的API KEY
-## 具体请阅读所有子目录下的README文件

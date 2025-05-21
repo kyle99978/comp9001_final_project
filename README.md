@@ -4,11 +4,11 @@ You can use the functions by running main.py
 
 Currently available functions:
 Text translation window, 
-MP3 audio file transcription, 
+MP3 audio file transcription and trasnslation(any-to-English), 
 AI chat window
 
-# You can play the demo video to check how to use
-## In addition, because the code uses an API, you should complete your own API KEY in the code to ensure that it works.
+# You can play the demo video to check how to use this application.
+## In addition, because the code uses APIs, you should complete your own API KEY in the code to ensure that it works.
 ## Please read the README files in all subdirectories if you want to master it fully.
 ###################################################################################################
 ###################################################################################################

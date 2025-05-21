@@ -1,6 +1,6 @@
 import requests
 
-# no api
+# no api， read README file
 # 创建Google Cloud项目：
 #
 # 访问Google Cloud Console，并登录你的Google账号。
@@ -14,6 +14,25 @@ import requests
 #
 # 在“API和服务” > “凭据”页面，点击“创建凭据”按钮，然后选择“API密钥”。
 # 复制生成的API密钥
+
+
+# if no api， read README file
+# Create a Google Cloud project:
+# Create an API key.
+# Access the Google Cloud Console and sign in to your Google account.
+# Click the "Select Project" button and then click "New Project".
+# Enter a project name and select a billing account, then click Create.
+# Enable the Cloud Translation API:
+# Create an API key.
+# In the Google Cloud Console, navigate to "APIs and Services" > "Enable APIs and Services".
+# Search for "Cloud Translation API" and click Enable.
+# Create an API key:
+# Create an API key.
+# On the "APIs and Services" > "Credentials" page, click the "Create Credentials" button, and then select "API KeyAPI Key".
+# Copy the generated API key
+
+
+
 
 
 def translate_with_google(text, target_lang='en', source_lang='auto'):

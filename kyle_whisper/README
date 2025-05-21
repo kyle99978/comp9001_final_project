@@ -1,13 +1,11 @@
-A1 A2 are test scripts in developing process
+A1 A2 are test scripts in developing process, you can ignore.
 
-faster_2 // faster_test // test_whisper // xxx.py are used to test basic funcs
+faster_2 // faster_test // test_whisper // xxx.py are used to test basic funcs for futher devloping, you can ignore.
 
-kyle_faster_whisper.py is a relatively well-developed test script with gui
-
-
-recording.py 是实现获取麦克风的音频，这个功能为实现实时翻译功能预留的
-实时翻译功能在GUI是已经预留，但是没有具体集成实现
+kyle_faster_whisper.py is a relatively well-developed test script with gui, you can use
 
 recording.py is used to get the audio from the microphone, which is reserved for real-time translation.
 This function is reserved for the real-time translation function in the GUI, but it is not integrated into the implementation.
 
+recording.py 是实现获取麦克风的音频，这个功能为实现实时翻译功能预留的
+实时翻译功能在GUI是已经预留，但是没有具体集成实现

@@ -6,7 +6,7 @@ import threading
 from tkinter import font
 import customtkinter as ctk
 import tkinter as tk
-import os  # 用于检查文件是否存在
+import os   
 import ctypes
 
 
@@ -22,8 +22,11 @@ except:
     pass
     # 仅 Windows 下有效,# 不然会获取不到真实的数据， 但是Linux mac不行
     # SetProcessDpiAwareness(1) 表示“系统感知 DPI”（可让 tkinter 得到真实分辨率）
+    # Only works on Windows, # otherwise you won't get real data, but not on Linux mac.
+    # SetProcessDpiAwareness(1) means "system aware of DPI" (allows tkinter to get real resolution)
 
 # 禁用 DPI 自动适配（一般不建议），是否使用系统 DPI 缩放设置（比如 125%、150%）来自动放大界面
+# Disable DPI auto-adaptation (generally not recommended) and whether to use system DPI scaling settings (e.g. 125%, 150%) to automatically zoom the interface
 ctk.deactivate_automatic_dpi_awareness()
 
 def ctk_ui( ):
@@ -38,14 +41,14 @@ def ctk_ui( ):
         "save_text": "None", # path if has
         "edit":True,
     }
-    # # 创建主窗口
+    # # main——win
     ctk_ui_root = ctk.CTk()
     ctk_ui_root.title("DUAN_Translating")
-    ctk_ui_root.attributes('-alpha', 1)  # 设置透明度
-    # ctk_ui_root.attributes('-topmost', 1)  # 置顶窗口
-    ctk_ui_root.resizable(False, False)  # 禁止允许用户用鼠标拖动改变大小（宽、高）resize
+    ctk_ui_root.attributes('-alpha', 1)  # 设置透明度 Setting transparency
+    # ctk_ui_root.attributes('-topmost', 1)  # 置顶窗口  sticky (of an Internet forum thread etc)
+    ctk_ui_root.resizable(False, False)  # 禁止用户用鼠标拖动改变大小（宽、高）resize  Disable users to drag the mouse to change the size (width, height) resize
 
-    # 放置调用的时候出现问题，比如路径找不到
+    # 防止调用的时候出现问题，比如路径找不到  Prevent problems when calling, such as path not found
     old_dir = os.getcwd()  # 1. 记住当前工作目录
     os.chdir(os.path.dirname(__file__))
 
@@ -289,7 +292,7 @@ def ctk_ui( ):
     ########################################  frame3  ####################################################################
     ##################################################################################################################
 
-    # Python 是动态语言,可以随时向任何对象添加属性
+    # Python 是动态语言,可以随时向任何对象添加属性， Python is a dynamic language, you can add properties to any object at any time.
     frame3.checkbox_values = ["Original",
                               "Translate",
                               "Save",

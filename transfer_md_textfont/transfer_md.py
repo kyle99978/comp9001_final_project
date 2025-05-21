@@ -1,20 +1,20 @@
 import customtkinter as ctk
 from markdown import markdown
-from tkhtmlview import HTMLLabel  # 用于渲染HTML格式的内容
+from tkhtmlview import HTMLLabel  # Used to render content in HTML format
 # from tkinterweb import HtmlFrame
 import tkinterweb as TKweb
 
-# tkinterweb 和 tkhtmlview区别：
-# tkhtmlview： 有内置的字体style，不需要后面去添加css美化，但是不能复制编辑
-# tkinterweb可以复制，但是需要自定义css
+# tkinterweb and tkhtmlview difference:
+# tkhtmlview: has built-in font style, no need to add css to beautify later, but can't be copied and edited.
+# tkinterweb can be copied, but you need to customise the css.
 
 from transfer_md_textfont.webframe_css import get_html_style, get_scroll_fix_css
 
-# 初始化CustomTkinter应用
+# Initialising the CustomTkinter application
 ctk.set_appearance_mode("System")  # Appearance: "System", "Dark", "Light"
 ctk.set_default_color_theme("blue")  # Theme color: "blue", "dark-blue", "green"
 
-# 创建主窗口
+# Creating the main window
 root0 = ctk.CTk()
 root0.withdraw()
 

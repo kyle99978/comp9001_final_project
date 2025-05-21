@@ -5,7 +5,7 @@ def translate_text(text, target_lang='EN'):
     url = "https://api-free.deepl.com/v2/translate"
     target_lang = target_lang
     params = {
-        'auth_key': 'your key',  # 替换为你的DeepL API密钥
+        'auth_key': 'your key',  # Replace it with your  API key
         'text': text,
         'target_lang': target_lang
     }
@@ -15,7 +15,8 @@ def translate_text(text, target_lang='EN'):
         result = response.json()
         # 如果请求成功，代码将响应转换为JSON格式，并提取翻译结果。
         # If the request is successful, the code converts the response to JSON and extracts the translation.
-        # result['translations'][0]['text']获取翻译后的文本并返回。
+        
+        # result['translations'][0]['text'] 获取翻译后的文本并返回。 # Get the translated text and return it.
         # A1 = result
         # A2 = result['translations']
         # A3 = result['translations'][0]
@@ -41,6 +42,7 @@ def translate_text(text, target_lang='EN'):
 
 def init_deepl_session(auth_key: str, target_lang='EN'):
     """初始化 DeepL API 会话参数"""
+    """Initialising DeepL API session parameters""""
     return {
         'url': "https://api-free.deepl.com/v2/translate",
         'auth_key': auth_key,
@@ -49,6 +51,7 @@ def init_deepl_session(auth_key: str, target_lang='EN'):
 
 def translate_text2(text: str, session_data: dict):
     """翻译文本，使用预初始化的 session_data"""
+    """Translate text, using pre-initialised session_data""""
     params = {
         'auth_key': session_data['auth_key'],
         'text': text,

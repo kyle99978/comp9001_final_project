@@ -19,9 +19,10 @@ index_win2.withdraw()
 
 
 #############################################################3
-# 翻译语言选择
+# Translation Language Selection
 #############################################################3
-# 互斥逻辑, 避免两边选择同样的语言
+# 互斥逻辑, 避免两边选择同样的语言 
+# Mutually exclusive logic, avoiding both sides choosing the same language
 def on_select_1(value, selected_option_1, selected_option_2,indexes_all):
     val = str(value).split(" ")[0]
     print("你选择了（左）：", val)
@@ -55,7 +56,7 @@ def on_select_2(value, selected_option_2, selected_option_1,indexes_all):
 
 
 #############################################################3
-# 翻译语言选择
+# Translation Language Selection
 #############################################################3
 
 
@@ -133,6 +134,7 @@ class ExclusiveSwitchGroup:
         self.switches.append(switch)
         switch.configure(command=lambda s=switch: self._on_selected(s))
         # 当你点击一个开关，就会触发 _only_keep_selected，它会关掉其他开关
+        # When you click on a switch, it triggers _only_keep_selected, which turns off the other switches
 
     def _on_selected(self, selected):
         global root
@@ -179,6 +181,7 @@ def add_frame2(root, frame2,frame3):
 
 def combobox_callback(frame3,indexes_all):
     # 这里可以根据需要读取所有复选框状态
+    # Here you can read all the checkbox statuses as required
     for name, var in frame3.check_vars.items():
         print(f"{name} = {var.get()}")
     print("---")

@@ -6,9 +6,8 @@
 # <a href>	蓝色字体 + underline + 鼠标悬停变色	✅ 用 CSS 完美模拟
 # <strong> / <b>	加粗（font-weight: bold）	✅ 有
 # <em> / <i>	斜体（font-style: italic）	✅ 有
-
-
-
+  
+########################################################################################################
 
 # 改进点	效果
 # pre 自动换行 + 横向滚动兼容	保留滚动条的同时，在较窄窗口也能换行
@@ -16,11 +15,11 @@
 # 表格默认样式增强	加边框 + 表头浅灰底，更好看
 # code 与 pre 分开设置	更符合 Markdown 语义差异
 
-# ✅ 白天模式：黑字白底
-# ✅ 夜间模式：白字深灰底
-# ✅ 自动跟随 CustomTkinter 当前主题（ctk.get_appearance_mode()）
-# ✅ 样式包含标题、段落、列表、代码块、表格、链接
-# ✅ 使用方式简单（只调用一个函数）
+#  白天模式：黑字白底
+#  夜间模式：白字深灰底
+#  自动跟随 CustomTkinter 当前主题（ctk.get_appearance_mode()）
+#  样式包含标题、段落、列表、代码块、表格、链接
+#  使用方式简单（只调用一个函数）
 
 # from markdown import markdown
 #
@@ -32,6 +31,31 @@
 #
 # # 拼接样式并显示
 # output_html_frame.load_html(style + html)
+
+########################################################################################################
+# Improvements Effect
+# pre Auto line feed + horizontal scrolling compatibility Preserves scrollbars while allowing line feeds in narrower windows.
+# Multi-level li indentation makes nested structures more visible.
+# table default style enhancement add border + light grey background in table header, better look.
+# Separate code and pre settings to better match Markdown semantic differences.
+
+#  Day mode: black text on white background
+#  Night mode: white text on dark grey background
+#  Automatically follow CustomTkinter current theme (ctk.get_appearance_mode())
+#  Styles include headings, paragraphs, lists, code blocks, tables, links
+#  Easy to use (only one function call)
+
+# from markdown import markdown
+#
+# # Get the CSS styles corresponding to the current theme.
+# style = get_html_style()
+#
+# # Convert Markdown content
+# html = markdown(markdown_text, extensions=["fenced_code", "tables"])
+#
+# # Stitch the styles and display them
+# output_html_frame.load_html(style + html)
+
 
 
 import customtkinter as ctk

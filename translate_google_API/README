@@ -1,13 +1,15 @@
-###############################################################
-#############   EN    #########################################
-###############################################################
+
+how to get api：
 https://docs.pingcode.com/baike/2704433
 https://blog.csdn.net/csdjia11/article/details/90263918
 https://www.niuqi360.com/webmaster/how-to-get-a-google-translate-api-key/
 
+###############################################################
+#############   EN    #########################################
+###############################################################
 
-In order to execute successfully, you need to get the API for deepl first.
-Then populate the key into the arguments of the py file(deep_api_in.py).
+In order to execute successfully, you need to get the API.
+Then populate the key into the arguments of the py file.
 '''
     params = {
         'q': text,
@@ -24,8 +26,8 @@ Then populate the key into the arguments of the py file(deep_api_in.py).
 #################  中文 ########################################
 ###############################################################
 
-为了执行成功，你需要先获取deepl的API，
-然后将key填充到py文件(deep_api_in.py)的参数中。
+为了执行成功，你需要先获取API，
+然后将key填充到py文件的参数中。
 
     params = {
         'q': text,

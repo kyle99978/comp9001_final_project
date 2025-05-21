@@ -42,6 +42,26 @@ def translate_text_with_time(
         - str: 翻译后的文本结果。
         - list: 包含各阶段时间的数组 [分词耗时, 翻译耗时, 解码耗时]。
     """
+    '''
+    Translates using the specified translation task and input text, and counts stage times.
+
+    Parameters.
+    ------
+    task : str
+        Language pair for the translation task (e.g. "Chinese ➜ English", "English ➜ Chinese").
+    text : str
+        Input text to be translated.
+    device_setting : str, optional
+        device_setting, default is "auto" (supports "auto", "cpu", "cuda").
+    precision_setting : str, optional
+        Precision options, default "fp32" (supports "fp32", "fp16", "int8").
+
+    Return value.
+    -------
+    tuple : (str, list)
+        - str: the result of the translated text.
+        - list: an array containing the time of each stage [time spent on segmentation, time spent on translation, time spent on decoding].
+    '''
     if task not in LANGUAGE_MODEL_MAPPING:
         raise ValueError(f"不支持的翻译任务: {task}")
 

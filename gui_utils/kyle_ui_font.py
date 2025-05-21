@@ -1,7 +1,7 @@
-# 创建字体字典
+# 创建字体字典 # Create  font
 dky_fonts = {}
 
-# 字体列表及其适用系统和用途
+# List of fonts and their applicable systems and uses
 font_info = [
     "Times New Roman",  # Windows, macOS, 文本
     "Microsoft YaHei",  # Windows, 文本和控件
@@ -19,7 +19,7 @@ font_info = [
     "Segoe UI Symbol" # Symbol
 ]
 
-# 使用循环创建 10 到 40 号字体
+# Use loops to create fonts from size 10 to 40
 for font_name in font_info:
     for size in range(10, 51):
         # font_name = font_name.replace(' ', '_') # 替换空格
@@ -29,6 +29,6 @@ for font_name in font_info:
         # 添加注释说明
         # print(f"# {font_key}使用")
 
-# 示例：访问某个字体
+# Example: Accessing a fontExample: Accessing a font
 # print(dky_fonts["Times_25"])  # 输出: ('Times New Roman', 25)
 

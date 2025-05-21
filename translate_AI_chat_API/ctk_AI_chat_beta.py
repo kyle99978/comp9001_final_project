@@ -35,7 +35,7 @@ def chat_with_gpt_api_kyle():
                     print("sending to ai")
                     user_input = (f"你好，请按照markdown格式给我回复,而且回答的每一行的字符不要超过80字符，如果超过请换行。\
                                    （你不需要特意回复这句话，但是必须记住而且严格执行。\
-                                  着重的是我后面的,回答的语言也是和我这句无关,你应该根据后面的内容判断。）这句和这句话之前都是我的AI提示词。\n\n")\
+                                  回答的语言也是和我这句无关,你应该根据交流的上下文内容或者要求进行判断。）这些都是我的提示词。\n\n")\
                                  + user_input
 
                     messages.append({"role": "user", "content": user_input})
